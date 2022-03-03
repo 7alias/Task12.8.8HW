@@ -44,20 +44,21 @@ public class Main {
 //        System.out.println(deque);
 
         ExampleMap exampleMap = new ExampleMap("Name", "Student");
-        System.out.println(exampleMap.hashCode());
+        System.out.print(exampleMap.hashCode());
+        if (exampleMap.hashCode() == 1791741888) System.out.println(" Equals 1791741888");
 
         exampleMap.put("Маша", "8");
         exampleMap.put("Михаил", "31");
         exampleMap.put("Олег", "12");
         exampleMap.put("Денис", "14");
 
-        System.out.println();
-        System.out.println("Элементы карты");
         System.out.print("\t" + exampleMap.getName().length());
         HashMap<Object, Map> hashMap = new HashMap<>();
         Hashtable<String, Boolean> stringBooleanHashtable = new Hashtable();
-        TreeMap<ExampleMap, String> exampleTreeMap = new TreeMap<>();
+        System.out.println(stringBooleanHashtable.elements());
+        TreeMap<ExampleSet, ExampleMap> exampleTreeMap = new TreeMap<>();
 
-        System.out.println(exampleTreeMap);
+        System.out.println(exampleTreeMap.size());
+
     }
 }
