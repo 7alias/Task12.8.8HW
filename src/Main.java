@@ -15,32 +15,36 @@ public class Main {
 
         Vector<ExampleList> listVector = new Vector<>();
         listVector.add(example);
+
         System.out.println("Name: " + linkedList.getFirst().getName());
         System.out.println(("Surname: " + linkedList.getLast().getSurname() +
                 ", status: " + listVector.get(0).isStatus()));
 
 
-        ExampleSet exampleCar = new ExampleSet(KIA, "Rio", 2018);
+        ExampleSet exampleSet = new ExampleSet(KIA, "Rio", 2018);
+
         Set<ExampleSet> exampleHashSet = new HashSet<>();
-        exampleHashSet.add(exampleCar);
+        exampleHashSet.add(exampleSet);
 
         LinkedHashSet<ExampleSet> exampleLinkedHashSet = new LinkedHashSet<>();
-        exampleLinkedHashSet.add(exampleCar);
+        exampleLinkedHashSet.add(exampleSet);
+        System.out.println("Linked HashSet size: " + exampleLinkedHashSet.size());
 
         TreeSet<ExampleSet> exampleTreeSet = new TreeSet<>();
-        exampleTreeSet.add(exampleCar);
+        exampleTreeSet.add(exampleSet);
+        System.out.println("exampleTreeSet size: " + exampleTreeSet.size());
 
         int i = 0;
         ExampleQueue exampleQueue = new ExampleQueue(i);
         LinkedList<ExampleQueue> exampleLinkedList = new LinkedList<>();
         PriorityQueue<ExampleQueue> priorityQueue = new PriorityQueue<>();
-        Deque<ExampleQueue> deque = (Deque<ExampleQueue>) priorityQueue;
-
-        System.out.println(deque);
 
 
-        ExampleMap exampleMap = new ExampleMap();
-        System.out.println(exampleMap);
+//        Deque<ExampleQueue> deque = (Deque<ExampleQueue>) priorityQueue;
+//        System.out.println(deque);
+
+        ExampleMap exampleMap = new ExampleMap("Name", "Student");
+        System.out.println(exampleMap.hashCode());
 
         exampleMap.put("Маша", "8");
         exampleMap.put("Михаил", "31");
@@ -49,9 +53,11 @@ public class Main {
 
         System.out.println();
         System.out.println("Элементы карты");
-        System.out.print("\t" + exampleMap);
+        System.out.print("\t" + exampleMap.getName().length());
         HashMap<Object, Map> hashMap = new HashMap<>();
         Hashtable<String, Boolean> stringBooleanHashtable = new Hashtable();
         TreeMap<ExampleMap, String> exampleTreeMap = new TreeMap<>();
+
+        System.out.println(exampleTreeMap);
     }
 }

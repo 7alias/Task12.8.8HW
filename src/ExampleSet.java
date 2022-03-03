@@ -1,4 +1,4 @@
-public class ExampleSet {
+public class ExampleSet implements Comparable {
 
     private String brand;
     private String model;
@@ -21,5 +21,14 @@ public class ExampleSet {
 
     public int getYear() {
         return year;
+    }
+
+    public String toUpperCase() {
+        return getModel().toUpperCase();
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        return 0;
     }
 }
