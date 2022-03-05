@@ -19,7 +19,8 @@ public class Main {
         System.out.println(("Surname: " + linkedList.getLast().getSurname() +
                 ", status: " + listVector.get(0).isStatus()));
 
-        ExampleSet exampleSet = new ExampleSet(KIA, "Rio", 2018);
+        ExampleSet exampleSet = new ExampleSet(KIA, "Rio", 2014);
+
         LinkedHashSet<ExampleSet> exampleLinkedHashSet = new LinkedHashSet<>();
         exampleLinkedHashSet.add(exampleSet);
         System.out.println("Linked HashSet size: " + exampleLinkedHashSet.size());
@@ -31,7 +32,7 @@ public class Main {
         ExampleMap exampleMap = new ExampleMap("Name", "Student");
         System.out.print("Map hashCode: " + exampleMap.hashCode());
 
-        if (exampleMap.hashCode() == 1329552164) System.out.println(" Equals 1791741888");
+        if (exampleMap.hashCode() == 1329552164) System.out.println(" Equals 1329552164");
 
         exampleMap.put("Маша", "8");
         exampleMap.put("Михаил", "31");
